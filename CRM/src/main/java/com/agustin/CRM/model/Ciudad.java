@@ -2,10 +2,14 @@ package com.agustin.CRM.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.UUID;
 
 @Entity
+@Getter
+@Setter
 public class Ciudad {
 
     @Id
@@ -25,5 +29,6 @@ public class Ciudad {
     @ManyToOne
     @JoinColumn(name = "provincia_id")
     private Provincia provincia;
+
 
 }
