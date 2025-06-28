@@ -7,9 +7,10 @@ import lombok.Setter;
 
 import java.util.UUID;
 
-@Entity
+
 @Getter
 @Setter
+@Entity
 public class Ciudad {
 
     @Id

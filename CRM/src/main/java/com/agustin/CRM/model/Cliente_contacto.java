@@ -7,14 +7,16 @@ import lombok.Setter;
 
 import java.util.UUID;
 
-@Entity
+
 @Getter
 @Setter
+@Entity
 public class Cliente_contacto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID cliente_contacto_id;
+
 
     @NotNull
     @ManyToOne

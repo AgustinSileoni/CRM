@@ -7,11 +7,13 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.Set;
 import java.util.UUID;
 
-@Entity
+
 @Getter
 @Setter
+@Entity
 public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -45,6 +47,7 @@ public class Cliente {
     @NotNull
     private LocalDate fecha_registro;
 
+
     @NotNull
     @ManyToOne
     @JoinColumn(name = "ciudad_id")
@@ -59,5 +62,8 @@ public class Cliente {
     @ManyToOne
     @JoinColumn(name = "tipo_cliente_id")
     private Tipo_cliente tipo_cliente;
+
+    @OneToMany(mappedBy = "cliente")
+    private Set<Cliente_contacto> contactos;
 
 }
