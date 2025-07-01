@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 public class ClienteService {
-    private ClienteRepository clienteRepository;
+    private final ClienteRepository clienteRepository;
 
     public ClienteService(ClienteRepository clienteRepository){
         this.clienteRepository=clienteRepository;
@@ -18,8 +18,7 @@ public class ClienteService {
 
     public List<ClienteResponseDTO> getClientes(){
         List<Cliente> clientes = clienteRepository.findAll();
-        List<ClienteResponseDTO> clienteResponseDTOS= clientes.stream()
+        return clientes.stream()
                 .map(ClienteMapper::toDTO).toList();
-        return clienteResponseDTOS;
     }
 }

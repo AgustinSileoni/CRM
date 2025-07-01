@@ -8,8 +8,6 @@ import lombok.Setter;
 import java.util.UUID;
 
 
-@Getter
-@Setter
 @Entity
 public class Provincia {
 
@@ -23,4 +21,28 @@ public class Provincia {
 
     @NotNull
     private String nombre;
+
+    public UUID getProvincia_id() {
+        return provincia_id;
+    }
+
+    public void setProvincia_id(UUID provincia_id) {
+        this.provincia_id = provincia_id;
+    }
+
+    public @NotNull Integer getCodigo_provincia() {
+        return codigo_provincia;
+    }
+
+    public void setCodigo_provincia(@NotNull Integer codigo_provincia) {
+        this.codigo_provincia = codigo_provincia;
+    }
+
+    public @NotNull String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(@NotNull String nombre) {
+        this.nombre = nombre;
+    }
 }

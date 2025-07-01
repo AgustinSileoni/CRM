@@ -8,8 +8,6 @@ import lombok.Setter;
 import java.util.UUID;
 
 
-@Getter
-@Setter
 @Entity
 public class Cliente_contacto {
 
@@ -31,4 +29,35 @@ public class Cliente_contacto {
     @NotNull
     private String rol;
 
+    public UUID getCliente_contacto_id() {
+        return cliente_contacto_id;
+    }
+
+    public void setCliente_contacto_id(UUID cliente_contacto_id) {
+        this.cliente_contacto_id = cliente_contacto_id;
+    }
+
+    public @NotNull Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(@NotNull Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public @NotNull Contacto getContacto() {
+        return contacto;
+    }
+
+    public void setContacto(@NotNull Contacto contacto) {
+        this.contacto = contacto;
+    }
+
+    public @NotNull String getRol() {
+        return rol;
+    }
+
+    public void setRol(@NotNull String rol) {
+        this.rol = rol;
+    }
 }
