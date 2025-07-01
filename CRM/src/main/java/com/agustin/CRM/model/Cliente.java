@@ -27,7 +27,7 @@ public class Cliente {
 
     @NotNull
     @Column(unique = true)
-    private Integer cuit;
+    private Long cuit;
 
     @NotNull
     private Integer telefono;
@@ -94,11 +94,11 @@ public class Cliente {
         this.dni = dni;
     }
 
-    public @NotNull Integer getCuit() {
+    public @NotNull Long getCuit() {
         return cuit;
     }
 
-    public void setCuit(@NotNull Integer cuit) {
+    public void setCuit(@NotNull Long cuit) {
         this.cuit = cuit;
     }
 
